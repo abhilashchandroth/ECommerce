@@ -18,23 +18,23 @@ namespace ECommerce.Api.Products.Controllers
         [HttpGet]
         public async Task<ActionResult> GetProductsAsync()
         {
-            var result = await productsProvider.GetProductAsync();
+            var result = await productsProvider.GetProductsAsync();
 
             if (result.IsSuccess)
             {
-                return Ok(result);
+                return Ok(result.products);
             }
             return NotFound();
         }
 
-        [HttpGet]
-        public async Task<ActionResult> GetProductByIdAsync(int productId)
+        [HttpGet("{id}")]
+        public async Task<ActionResult> GetProductByIdAsync(int id)
         {
-            var result = await productsProvider.GetProductByIdAsync(productId);
+            var result = await productsProvider.GetProductByIdAsync(id);
 
             if (result.IsSuccess)
             {
-                return Ok(result);
+                return Ok(result.product);
             }
             return NotFound();
         }

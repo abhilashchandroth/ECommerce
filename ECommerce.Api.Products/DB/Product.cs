@@ -1,4 +1,4 @@
-﻿namespace ECommerce.Api.Products.DB
+﻿namespace ECommerce.Api.Products.Db
 {
     public class Product
     {

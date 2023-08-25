@@ -1,4 +1,4 @@
-using ECommerce.Api.Products.DB;
+using ECommerce.Api.Products.Db;
 using ECommerce.Api.Products.Interface;
 using ECommerce.Api.Products.Providers;
 using Microsoft.AspNetCore.Builder;
